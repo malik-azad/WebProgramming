@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1">The Traingle is : </h1>
+    
+    <p><b>Equilateral Triangle:</b> A triangle in which all three sides are of equal length</p>
+    <p><b>Isosceles Triangle: </b>A triangle in which at least two sides are of equal length.</p>
+    <p><b>Scalene Triangle: </b>A triangle in which all three sides have different lengths.</p>
+    <script>
+        let side1 = parseInt(prompt("Enter the length of side 1:"));
+        let side2 = parseInt(prompt("Enter the length of side 2:"));
+        let side3 = parseInt(prompt("Enter the length of side 3:"));
+
+        if (side1 === side2 && side2 === side3) {
+            document.getElementById('h1').innerHTML += " Equilateral Triangle";
+
+        } else if (side1 === side2 || side1 === side3 || side2 === side3) {
+            document.getElementById('h1').innerHTML += " Isosceles Triangle";
+        } else {
+            document.getElementById('h1').innerHTML += " Scalene Triangle";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
