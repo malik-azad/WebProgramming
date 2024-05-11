@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Ends With Test</title>
+    <script>
+        function endsWith(str, suffix) {
+            return str.endsWith(suffix);
+        }
+
+        function testStringEndsWith() {
+            var inputString = document.getElementById("inputString").value;
+            var suffix = document.getElementById("suffix").value;
+            
+            if (inputString.trim() === "" || suffix.trim() === "") {
+                alert("Please enter both a string and a suffix.");
+                return;
+            }
+            
+            var result = endsWith(inputString, suffix);
+            var outputElement = document.getElementById("output");
+            outputElement.textContent = "Does '" + inputString + "' end with '" + suffix + "'? " + result;
+        }
+    </script>
+</head>
+<body>
+    <h1>String Ends With Test</h1>
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString">
+    <br>
+    <label for="suffix">Enter the suffix to check:</label>
+    <input type="text" id="suffix">
+    <br>
+    <button onclick="testStringEndsWith()">Test</button>
+    <br>
+    <p id="output"></p>
+</body>
+</html>
